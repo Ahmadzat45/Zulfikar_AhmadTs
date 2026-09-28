@@ -1,0 +1,70 @@
+/* Mengatur Font Utama */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* Jarak untuk sticky navbar */
+}
+
+/* Custom warna Primary (Biru) */
+.text-primary {
+    color: #4e73df !important;
+}
+
+.bg-primary {
+    background-color: #4e73df !important;
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+    .btn-primary:hover {
+        background-color: #2e59d9;
+        border-color: #2653d4;
+    }
+
+/* Custom Warna Merah (Untuk JavaScript) */
+.bg-merah {
+    background-color: #e74a3b !important;
+    color: #ffffff !important;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.profile-img {
+    max-width: 80%;
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+}
+
+    .profile-img:hover {
+        transform: scale(1.05);
+    }
+
+/* Divider kecil di bawah judul */
+.divider {
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Efek Hover pada Project Cards */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+    }
+
+/* Efek scroll halus untuk navigasi */
+html {
+    scroll-behavior: smooth;
+}

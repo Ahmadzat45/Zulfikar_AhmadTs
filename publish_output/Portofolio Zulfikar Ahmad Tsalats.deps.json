@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Portofolio Zulfikar Ahmad Tsalats/1.0.0": {
+        "runtime": {
+          "Portofolio Zulfikar Ahmad Tsalats.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Portofolio Zulfikar Ahmad Tsalats/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

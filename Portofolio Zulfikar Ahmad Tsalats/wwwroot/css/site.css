@@ -1,0 +1,422 @@
+/* ==========================================================================
+   1. REGULASI DASAR & FONT UTAMA
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* Jarak agar konten tidak tertutup Navbar Fixed */
+    background-color: #fbfbfb; /* Warna latar belakang lembut */
+    color: #212529;
+}
+
+/* ==========================================================================
+   2. UTILITY & WARNA CUSTOM
+   ========================================================================== */
+.text-primary {
+    color: #4e73df !important;
+}
+
+.bg-primary {
+    background-color: #4e73df !important;
+}
+
+.bg-merah {
+    background-color: #e74a3b !important;
+    color: #ffffff !important;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   3. GLASSMORPHISM NAVBAR
+   ========================================================================== */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   4. HERO SECTION & FOTO PROFIL
+   ========================================================================== */
+.hero-section {
+    min-height: 80vh;
+    position: relative;
+    background-image: url('../images/background_website.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    /* Lapisan Overlay Putih Transparan */
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        z-index: 0;
+    }
+
+    .hero-section .container {
+        position: relative;
+        z-index: 1;
+    }
+
+/* Teks Judul Hero dengan Gradasi Warna */
+.hero-title-highlight {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Kotak Teks Transparan (Dark Glassmorphism) */
+.glass-text-box {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+    .glass-text-box h1 {
+        color: #ffffff;
+    }
+
+    .glass-text-box .text-secondary {
+        color: #d1d3e2 !important;
+    }
+
+    .glass-text-box .lead {
+        color: #f8f9fa;
+    }
+
+/* Wrapper & Animasi Foto Profil Bulat Sempurna */
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+    .profile-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(78, 115, 223, 0.15), rgba(54, 185, 204, 0.5));
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        z-index: -1;
+        animation: morphBackground 8s ease-in-out infinite;
+    }
+
+.profile-img {
+    max-width: 95%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    animation: floatPhoto 5s ease-in-out infinite;
+}
+
+@keyframes floatPhoto {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes morphBackground {
+    0%, 100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    50% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+}
+
+/* ==========================================================================
+   5. TOMBOL (BUTTONS)
+   ========================================================================== */
+.btn {
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4e73df, #36b9cc);
+    border: none;
+}
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(78, 115, 223, 0.3);
+    }
+
+/* Tombol Download CV (Capsule Outline Style) */
+.btn-download-cv {
+    display: inline-block;
+    padding: 10px 28px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    margin-left: 8px;
+}
+
+    .btn-download-cv:hover {
+        background-color: #ffffff;
+        color: #0d6efd !important;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    }
+
+/* ==========================================================================
+   6. SECTION EDUCATION
+   ========================================================================== */
+.edu-logo-wrapper {
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.edu-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   7. SECTION EXPERIENCE (TIMELINE)
+   ========================================================================== */
+.experience-timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3.5px solid #0d6efd;
+    margin-left: 15px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+
+.timeline-dot {
+    position: absolute;
+    left: -39.25px;
+    top: 6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid #0d6efd;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.experience-card {
+    border: 1px solid #eef2f6;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .experience-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+.timeline-subtitle {
+    font-size: 0.9rem;
+}
+
+    .timeline-subtitle strong {
+        color: #212529;
+        font-weight: 700;
+    }
+
+.timeline-date {
+    font-weight: 400 !important;
+    color: #6c757d;
+}
+
+/* ==========================================================================
+   8. SECTION SKILLS
+   ========================================================================== */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+    .skill-box:hover {
+        transform: translateY(-6px) scale(1.05);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    }
+
+.skill-blue-main {
+    background-color: #4e73df;
+}
+
+.skill-tosca {
+    background-color: #36b9cc;
+}
+
+/* ==========================================================================
+   9. SECTION LATEST PROJECT
+   ========================================================================== */
+.project-card-custom {
+    background-color: #ffffff;
+    color: #212529;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+    .project-card-custom:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+.project-title-area {
+    min-height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.photo-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .photo-stack img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+    }
+
+        .photo-stack img:hover {
+            transform: scale(1.02);
+        }
+
+.project-details-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* ==========================================================================
+   10. GLIGHTBOX & MEDIA OVERRIDES
+   ========================================================================== */
+.glightbox-container .goverlay {
+    background: rgba(0, 0, 0, 0.75) !important;
+}
+
+.glightbox-container .gprev,
+.glightbox-container .gnext {
+    display: none !important;
+}
+
+.social-icon img {
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.15);
+}
+
+/* ==========================================================================
+   11. MEDIA QUERIES (RESPONSIVE DESIGN UNTUK HP / MOBILE)
+   ========================================================================== */
+@media (max-width: 576px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .experience-timeline {
+        padding-left: 20px;
+        margin-left: 5px;
+    }
+
+    .timeline-dot {
+        left: -29.25px;
+    }
+
+    .glass-text-box {
+        padding: 25px 20px;
+    }
+
+    .btn-download-cv {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
